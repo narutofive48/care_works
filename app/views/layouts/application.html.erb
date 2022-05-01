@@ -1,15 +1,238 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>求人サイト向け 無料ホームページテンプレート tp_job2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-
-    <title>求人サイト向け 無料ホームページテンプレート tp_job2</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <%= javascript_pack_tag 'openclose.js' %>
+    <%= javascript_pack_tag 'fixmenu.js' %>
+    <%= javascript_pack_tag 'fixmenu_pagetop.js' %>
+    <%= javascript_pack_tag 'ddmenu_min.js' %>
+    <%= javascript_pack_tag 'application.js' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+
+
+  <div id="container">
+
+    <header>
+      <h1 id="logo"><img src="images/logo_top.png" alt="SAMPLE SEARCH"></h1>
+      <!--スライドショー-->
+      <aside id="mainimg">
+        <img src="images/1.jpg" alt="" class="slide1">
+        <img src="images/2.jpg" alt="" class="slide2">
+        <img src="images/3.jpg" alt="" class="slide3">
+      </aside>
+      <!--スライドショー下部の装飾用画像-->
+      <img src="images/123bg.png" alt="" id="kazari">
+    </header>
+
+    <!--PC用（801px以上端末）メニュー-->
+    <nav id="menubar" class="nav-fix-pos">
+      <ul class="inner">
+        <li><a href="index.html">ホーム<span>Home</span></a></li>
+        <li><a href="recruit.html">求人一覧<span>Recruit</span></a>
+          <ul class="ddmenu">
+            <li><a href="list.html">飲食店（XX件）</a></li>
+            <li><a href="list.html">営業（XX件）</a></li>
+            <li><a href="list.html">接客・販売（XX件）</a></li>
+            <li><a href="list.html">事務（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+            <li><a href="list.html">求人タイトル（XX件）</a></li>
+          </ul>
+        </li>
+        <li><a href="info.html">掲載のご案内<span>Information</span></a></li>
+        <li><a href="faq.html">よく頂く質問<span>Faq</span></a></li>
+        <li><a href="contact.html">お問い合わせ<span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+    <!--小さな端末用（900px以下端末）メニュー-->
+    <nav id="menubar-s">
+      <ul>
+        <li><a href="index.html">ホーム<span>Home</span></a></li>
+        <li><a href="recruit.html">求人一覧<span>Recruit</span></a></li>
+        <li><a href="info.html">掲載のご案内<span>Information</span></a></li>
+        <li><a href="faq.html">よく頂く質問<span>Faq</span></a></li>
+        <li><a href="link.html">リンク<span>Link</span></a></li>
+        <li><a href="company.html">会社概要<span>Company</span></a></li>
+        <li><a href="contact.html">お問い合わせ<span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+    <div id="contents">
+
+      <div class="inner">
+
+        <section>
+
+          <h2>現在の求人<span>List of Jobs</span></h2>
+          <p>以下のサムネイル画像は直接imgタグで配置しています。必要に応じて入れ替えて下さい。</p>
+
+          <ul class="list2">
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">飲食店の求人<br><span>10件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">営業の求人<br><span>200件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">接客・販売の求人<br><span>300件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">事務の求人<br><span>1,234件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">飲食店の求人<br><span>10件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">営業の求人<br><span>200件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">接客・販売の求人<br><span>300件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">事務の求人<br><span>1,234件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">飲食店の求人<br><span>10件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">営業の求人<br><span>200件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">接客・販売の求人<br><span>300件</span></a></li>
+            <li><a href="list.html"><img src="images/00338.png" alt="" class="img">事務の求人<br><span>1,234件</span></a></li>
+          </ul>
+
+        </section>
+
+      </div>
+      <!--/.inner-->
+
+      <div class="inner">
+         <%= yield %>
+
+
+      <div class="sub">
+
+        <div class="box1">
+
+        <h2>人気業種</h2>
+
+          <div class="list-sub">
+            <a href="item.html">
+            <h4>WEBデザイナー募集</h4>
+            <p>■給与…月給25万円〜<br>
+            ■募集タイプ…正社員<br>
+            ■勤務地…千葉市中央区<br>
+            <span class="new">new</span>
+            </p>
+            </a>
+          </div>
+
+          <div class="list-sub">
+            <a href="item.html">
+            <h4>WEBデザイナー募集</h4>
+            <p>■給与…月給25万円〜<br>
+            ■募集タイプ…正社員<br>
+            ■勤務地…千葉市中央区<br>
+            </p>
+            </a>
+          </div>
+
+          <div class="list-sub">
+            <a href="item.html">
+            <h4>WEBデザイナー募集</h4>
+            <p>■給与…月給25万円〜<br>
+            ■募集タイプ…正社員<br>
+            ■勤務地…千葉市中央区<br>
+            </p>
+            </a>
+          </div>
+
+        </div>
+
+        <nav class="box1">
+          <h2>Menu</h2>
+          <ul class="submenu">
+            <li><a href="#">メニュー</a></li>
+            <li><a href="#">メニュー</a></li>
+            <li><a href="#">メニュー</a></li>
+            <li><a href="#">メニュー</a></li>
+          </ul>
+        </nav>
+
+        <div class="box1">
+          <h2>この見出しはh2タグです</h2>
+          <p>このボックスは、class="box1"と指定すれば出ます。</p>
+        </div>
+
+        <h2>Access</h2>
+        <div class="box1">
+          <strong>TEL:00-0000-0000</strong><br>
+          <span class="mini1">受付：00:00〜00:00<br>
+          定休日：水曜日</span>
+        </div>
+
+      </div>
+      <!--/.sub-->
+
+    </div>
+  <!--/.inner-->
+
+  </div>
+  <!--/#contents-->
+
+  <footer>
+
+  <div id="footermenu" class="inner">
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="info.html">掲載のご案内</a></li>
+      <li><a href="link.html">リンク</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <ul>
+      <li class="title"><a href="recruit.html">求人一覧</a></li>
+      <li><a href="list.html">飲食店（XX件）</a></li>
+      <li><a href="list.html">営業（XX件）</a></li>
+      <li><a href="list.html">接客・販売（XX件）</a></li>
+      <li><a href="list.html">事務（XX件）</a></li>
+    </ul>
+    <ul>
+      <li class="title">タイトル</li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+    </ul>
+    <ul>
+      <li class="title">タイトル</li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+      <li><a href="#">メニューサンプル</a></li>
+    </ul>
+  </div>
+  <!--/#footermenu-->
+
+  <div id="copyright">
+    <small>Copyright&copy; <a href="index.html">SAMPLE SEARCH</a> All Rights Reserved.</small>
+    <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+  </div>
+  <!--/#copyright-->
+
+  </footer>
+
+</div>
+<!--/#container-->
+
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+<!--メニューの開閉処理条件設定　800px以下-->
+<script>
+  if (OCwindowWidth() <= 800) {
+    open_close("menubar_hdr", "menubar-s");
+  }
+</script>
+
+</body>
+
 </html>
